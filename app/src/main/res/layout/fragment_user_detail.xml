@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.UserDetailFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/avatar"
+        android:layout_width="@dimen/big_avatar_size"
+        android:layout_height="@dimen/big_avatar_size"
+        android:layout_margin="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_margin="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/avatar"/>
+
+    <View
+        android:id="@+id/division"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        android:background="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/user_icon"
+        android:layout_width="@dimen/user_page_logo_size"
+        android:layout_height="@dimen/user_page_logo_size"
+        app:layout_constraintTop_toBottomOf="@id/division"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="@dimen/user_page_icon_margin"
+        android:background="@drawable/user"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/map_icon"
+        android:layout_width="@dimen/user_page_logo_size"
+        android:layout_height="@dimen/user_page_logo_size"
+        app:layout_constraintTop_toBottomOf="@id/user_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="@dimen/user_page_icon_margin"
+        android:background="@drawable/map"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/link_icon"
+        android:layout_width="@dimen/user_page_logo_size"
+        android:layout_height="@dimen/user_page_logo_size"
+        app:layout_constraintTop_toBottomOf="@id/map_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="@dimen/user_page_icon_margin"
+        android:background="@drawable/link"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
