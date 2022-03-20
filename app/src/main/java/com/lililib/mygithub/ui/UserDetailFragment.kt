@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.AppCompatImageView
+import androidx.appcompat.widget.AppCompatTextView
 import com.lililib.mygithub.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -22,6 +24,9 @@ class UserDetailFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private var avatar : AppCompatImageView? = null
+    private var name : AppCompatTextView? = null;
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -36,8 +41,13 @@ class UserDetailFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         var root = inflater.inflate(R.layout.fragment_user_detail, container, false)
-
+        avatar = root.findViewById(R.id.avatar)
+        name = root.findViewById(R.id.name);
         return root
+    }
+
+    private fun bindData(){
+
     }
 
     companion object {
